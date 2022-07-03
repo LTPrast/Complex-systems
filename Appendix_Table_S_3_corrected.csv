@@ -1,0 +1,80 @@
+﻿Role_1;Role_2;Edges
+International trade;Coordinator;83
+International trade;International trade;61
+International trade;Transporting;51
+International trade;Selling to coffeeshops;36
+International trade;Growshop owner;8
+Financing;Coordinator;63
+Financing;Financing;25
+Transporting ;International trade;51
+Transporting ;Coordinator;34
+Transporting ;Transporting;17
+Transporting ;Selling to coffeeshops;12
+Transporting ;Growshop owner;4
+Growshop owner ;Supply of cuttings for plants;18
+Growshop owner ;Growshop owner;11
+Growshop owner ;Supply of growth necessities;11
+Growshop owner ;International trade;8
+Growshop owner ;Selling to coffeeshops;5
+Growshop owner ;Transporting;4
+Growshop owner ;Adding weight to the toppings;4
+Growshop owner ;Arranging storage;2
+Growshop owner ;Drying toppings;1
+Supply of growth necessities;Coordinator;13
+Supply of growth necessities;Growshop owner;11
+Supply of growth necessities;Supply of growth necessities;6
+Supply of growth necessities;Building a plantation;3
+Supply of growth necessities;Diverting electricity;1
+Selling to coffeeshops;Coordinator;43
+Selling to coffeeshops;International trade;36
+Selling to coffeeshops;Selling to coffeeshops;24
+Selling to coffeeshops;Transporting;12
+Selling to coffeeshops;Growshop owner;5
+Supply of cuttings for plants;Supply of cuttings for plants;20
+Supply of cuttings for plants;Growshop owner;18
+Taking care of plants ;Coordinator;85
+Taking care of plants ;Taking care of plants;52
+Taking care of plants ;Protection of plantation;18
+Arranging location for plantation;Coordinator;55
+Arranging location for plantation;Arranging location for plantation;24
+Arranging location for plantation;Arranging fake owners of property;14
+Arranging location for plantation;Fake owner of a company or house;11
+Diverting electricity ;Coordinator;5
+Diverting electricity ;Building a plantation;3
+Diverting electricity ;Diverting electricity;3
+Diverting electricity ;Supply of growth necessities;1
+Arranging storage ;Coordinator;21
+Arranging storage ;Adding weight to the toppings;21
+Arranging storage ;Drying toppings;16
+Arranging storage ;Arranging storage;11
+Arranging storage ;Growshop owner;2
+Fake owner of a company or house;Coordinator;21
+Fake owner of a company or house;Arranging location for plantation;11
+Fake owner of a company or house;Fake owner of a company or house;2
+Fake owner of a company or house;Arranging fake owners of property;1
+Protection of plantation;Coordinator;19
+Protection of plantation;Taking care of plants;18
+Protection of plantation;Protection of plantation;7
+Coordinator;Taking care of plants;85
+Coordinator;International trade;83
+Coordinator;Financing;63
+Coordinator;Arranging location for plantation;55
+Coordinator;Coordinator;53
+Coordinator;Selling to coffeeshops;43
+Coordinator;Transporting;34
+Coordinator;Adding weight to the toppings;31
+Coordinator;Building a plantation;26
+Coordinator;Arranging storage;21
+Coordinator;Fake owner of a company or house;21
+Coordinator;Cutting toppings;20
+Coordinator;Protection of plantation;19
+Coordinator;Drying toppings;14
+Coordinator;Controlling cutters;14
+Coordinator;Supply of growth necessities;13
+Coordinator;Arranging fake owners of property;11
+Coordinator;Diverting electricity;5
+Building a plantation;Coordinator;26
+Building a plantation;Building a plantation;9
+Building a plantation;Supply of growth necessities;3
+Building a plantation;Diverting electricity;3
+Building a plantation;Growshop owner;1

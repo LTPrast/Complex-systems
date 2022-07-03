@@ -7,7 +7,7 @@ import operator
 from collections import Counter
 from math import ceil
 
-
+# Initializes the network based on the data from the paper
 def initialize_network():
     # using Table S-3 and S-4 from Appendix
     # Step 1: make seperate barabasi albert graphs for every role, 
@@ -198,32 +198,34 @@ def network_stats(G, roles=[]):
         return [nodes, edges, average_degree, shortest_path, diameter, largest_component, df_roles_stats]
 
 
+#dictionary of all nodes and their degree to remove node with highest degree
 def get_nodes_degree(G):
-  #dictionary of all nodes and their degree to remove node with highest degree
   node_links = {}
   for i in G.degree():
     node_links[i[0]] = i[1]
   return node_links
 
+# To get all the links of the removed node
 def links_removed_node(G, node_most_links):
-  """To get all the links of the removed node"""
   links_of_removed_node = [ ]
   for i in G.edges(node_most_links):
     links_of_removed_node.append(i[1])
   return links_of_removed_node
 
+# To calculate the part of the nodes that belong to the GC
 def giant_component_perc(G):
-  """To calculate the part of the nodes that belong to the GC"""
   n_giant_component = len(sorted(nx.connected_components(G), key=len, reverse=True)[0])
   n_nodes = G.number_of_nodes()
   percentage_in_giant = n_giant_component/n_nodes * 100
   return percentage_in_giant 
 
+# Calculates efficiency of value chain network
 def calc_efficiency(G):
   efficiency_cycle = nx.global_efficiency(G)
   efficiency_cycle_perc = efficiency_cycle*100
   return efficiency_cycle_perc
   
+# Calculates efficiency of macro network
 def calc_efficiency_macro(G_VC, G):
     sum = 0
     for node_i in list(G_VC.nodes()):
@@ -234,7 +236,6 @@ def calc_efficiency_macro(G_VC, G):
     return sum / (n *(n-1)) * 100
 
 """ structural(social capital) disruption strategies : 1. Random   2.Hub   3.Broker(between centrality)"""
-
 """ removal of a random node/actor """
 def removal_random(G):
   #remove a random node
@@ -244,8 +245,6 @@ def removal_random(G):
   #getting the links of the removed node so that we link the chosen node
   #to those nodes
   links_of_removed_node = links_removed_node(G, rd_node)  
-
-  """ Added on 23rd June : Harshita"""
   removed_node_role = G.nodes[rd_node]["role"]
 
   G.remove_node(rd_node)
@@ -441,9 +440,8 @@ def random_recovery(role_removed_node,removed_node,group, links_of_removed_node,
     
     return group,distances
 
-
+#Degree recovery algorithm
 def degree_recovery(role_removed_node,removed_node, group,links_of_removed_node, G, p):
-    """#Degree recovery algorithm"""
     if not group:
         distances = []
         return group, distances
@@ -516,7 +514,7 @@ def distance_recovery(role_disrupted_node,removed_node,group,links_removed_node_
     return group,distance_list
 
 
-
+# Simulates macro network
 def simulate_macro_VC(n_nodes_removal, n_simulations, remove_strat, recover_strat):
     data_per_giant1_total = np.array([])
     total_efficiency1_total = np.array([])
@@ -582,8 +580,8 @@ def simulate_macro_VC(n_nodes_removal, n_simulations, remove_strat, recover_stra
     
     return data_per_giant1_total, total_efficiency1_total, total_density1_total, dist_total
 
+# dictionary with list object in values
 def get_dict_sim_details(disrupt_strat,recovery_strat,efficiency,density,n_sim,n_nodes_removed,combined_network):
-    # dictionary with list object in values
     details = {
         'disruption' : disrupt_strat,
         'recovery' : recovery_strat,
@@ -595,6 +593,7 @@ def get_dict_sim_details(disrupt_strat,recovery_strat,efficiency,density,n_sim,n
     }
     return details
 
+# Simulates value chain network
 def simulate(n_nodes_removal, n_simulations, remove_strat, recover_strat):
     data_per_giant1_total = np.array([])
     total_efficiency1_total = np.array([])
