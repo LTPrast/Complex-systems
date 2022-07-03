@@ -6,7 +6,7 @@
 
 Our project explores the resilience of criminal networks, specifically for 5 different types of disruption strategies where a node is removed from the network and for 3 types of recovery strategies where the network tries to replace the removed node with another having the same role. Our work closely follow the paper "The Relative Ineffectiveness of Criminal Network Disruption" by Duijn P. et al. 
 
-The Jupyter notebook file makes use of functions imported from funcs.py and generates & simulates a criminal network which is disrupted at every time step, specifying certain disruption and recovery strategies, and plots how the effieceincy, density, and average distance for new connection changes over time (all explained more thoroughly below). 
+The Jupyter notebook file makes use of functions imported from funcs.py and generates & simulates a criminal network which is disrupted at every time step. It should be noted that for the speed of the programm we only simulate one combination of disruption and recovery strategy at the time in these files, but for the graphs of the slides we did simulated them all together. specifying certain disruption and recovery strategies, and plots how the effieceincy, density, and average distance for new connection changes over time (all explained more thoroughly below). 
 
 The slides from our presentation can also be found as a pdf here.
 
